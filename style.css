@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(128, 32, 0, 0.96) 17%, rgba(138, 37, 3, 0.96) 23%, rgba(90, 49, 90, 1) 100%);
+}
+.container{
+    width: 90%;
+    max-width: 450px;
+}
+h1{
+    color: white;
+    /* opacity: 90%; */
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.2;
+    font-size: 2rem;
+}
+.display-container{
+    margin:1rem 0;
+    background-color:rgb(105, 9, 9);
+    position: relative;
+    border-radius: 1rem;
+    padding-top: 0.1rem;
+}
+.display{
+    width: auto;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3rem;
+    border: none;
+    color: rgba(231, 231, 9, 0.74);
+}
+.display::placeholder{
+    position: absolute;
+    color: rgba(231, 231, 9, 0.74);
+    left: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 30px;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.display-container button{
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.input-container{
+    background-color:rgb(105, 9, 9);
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+.length-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.length-container p:nth-child(1){
+    color: white;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+.length-container p:nth-child(2){
+    color:  rgba(231, 231, 9, 0.74);
+    font-size: 1.3rem;
+}
+.strength-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem; 
+}
+.strength-container p{
+    color: white;
+    font-size: 1.5rem;
+}
+.indicator{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.generateButton{
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    border-radius: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: rgba(202, 30, 30, 0.795);
+    color: rgba(231, 231, 9, 0.74);
+    cursor: pointer;
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid whitesmoke;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+.check input:checked{
+    background-color: rgb(211, 102, 102);
+}
+.check input:checked::before{
+    content: '✔';
+    position: absolute;
+    color: black;
+    font-weight: 700;
+    top: -20%;
+}
+.check label{
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+}
+.copyy{
+    background-color: transparent;
+    border: none;
+}
+.tool{
+    position: absolute;
+    background-color: rgba(202, 30, 30, 0.795);
+    color: white;
+    font-size: 1rem;
+    opacity: 0;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+.tool.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.slider{
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgba(202, 30, 30, 0.795);
+    border-radius: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    height: 1rem;
+    z-index: -1;
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    background-color:rgba(231, 231, 9, 0.74);
+    border-radius: 50%;
+    cursor: pointer;
+    margin: -3px;
+    box-shadow: 0px 0px 10px 0px rgba(231, 231, 9, 0.74);
+    transition: all 100ms ease-in;
+    border: none;
+}
+.slider:focus{
+    outline: 2px solid rgba(231, 231, 9, 0.74);
+}
+.slider::-webkit-slider-thumb{
+    outline: 2px solid rgba(231, 231, 9, 0.74);
+    background-color: rgba(97, 7, 7, 0.432);
+    box-shadow: 0px 0px 25px 5px rgba(231, 231, 9, 0.74);
+}
+
