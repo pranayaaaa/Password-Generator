@@ -14,5 +14,5 @@ A simple password generator web application built using HTML and CSS. This tool 
 3. **Click the "Generate Password" button** to create a new random password.
 4. The generated password will be displayed in the output field.
 
-# Screenshot
-![image](https://github.com/user-attachments/assets/07806444-e644-4cf2-9c77-fb41affcf2a9)
+# Live Demo
+https://passs-create.netlify.app/
